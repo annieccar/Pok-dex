@@ -34,11 +34,7 @@ function App() {
 
   return (
     <>
-      <NavBar
-        pokémonIndex={pokémonIndex}
-        setPokémonIndex={setPokémonIndex}
-        pokemonList={pokemonList}
-      />
+      <NavBar setPokémonIndex={setPokémonIndex} pokemonList={pokemonList} />
       <PokemonCard
         name={pokemonList[pokémonIndex].name}
         imgSrc={pokemonList[pokémonIndex].imgSrc}
