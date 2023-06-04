@@ -1,10 +1,18 @@
 import PropTypes from "prop-types";
+import styles from "./PokemonCard.module.css";
 
 const PokemonCard = (pokemon) => {
   if (pokemon.imgSrc) {
     return (
-      <figure>
-        <img src={pokemon.imgSrc} alt={`Image of a ${pokemon.name}`} />
+      <figure
+        className={styles.card}
+        style={{ backgroundColor: pokemon.color }}
+      >
+        <img
+          className={styles.cardImg}
+          src={pokemon.imgSrc}
+          alt={`Image of a ${pokemon.name}`}
+        />
         <figcaption>{pokemon.name}</figcaption>
       </figure>
     );
